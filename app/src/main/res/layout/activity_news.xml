@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/bg_line"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment">
+
+    <TextView
+        android:id="@+id/textView_title_news_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="@string/title_news"
+        android:textColor="@color/title_green"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/button_close"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/ic_baseline_close_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/layout_news"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/bg_border"
+        android:padding="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_title_news_detail" >
+        <TextView
+            android:id="@+id/news_title"
+            android:fontFamily="@font/roboto_bold"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:text="新增65例COVID-19確定病例，分別為14例本土及51例境外移入"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <View
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+
+            android:background="@android:color/darker_gray"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/news_text"
+                android:textSize="18sp"
+                android:text="中央流行疫情指揮中心今(13)日公布國內新增65例COVID-19確定病例，分別為14例本土個案及51例境外移入；另確診個案中新增1例死亡。\n\n指揮中心表示，今日新增本土個案為3例男性、11例女性，年齡介於未滿10歲至60多歲；詳如新聞稿附件。\n\n指揮中心說明，今日新增境外移入個案為17例男性、28例女性、6例調查中，年齡介於未滿5歲至70多歲，分別自美國(28例)、越南(3例)、法國、澳大利亞、菲律賓及英國(各2例)、阿拉伯聯合大公國、哥斯大黎加、瓜地馬拉、印尼、德國、孟加拉、丹麥、印度及義大利(各1例)移入；另3例調查中。入境日介於去(2021)年12月29日至今(2022)年1月12日；詳如新聞稿附件。\n\n指揮中心表示，今日新增1例死亡個案(案16906)，為50多歲本國籍男性，具慢性病史；去年12月於越南確診，當月17日由國際緊急醫療專機從越南接運返國住院隔離治療，今年1月9日死亡。\n\n指揮中心統計，截至目前國內累計5,187,725例新型冠狀病毒肺炎相關通報(含5,168,285例排除)，其中17,624例確診，分別為2,905例境外移入，14,665例本土病例，36例敦睦艦隊、3例航空器感染、1例不明及14例調查中；無新增空號病例，累計114例移除為空號。2020年起累計851例COVID-19死亡病例，其中838例本土，個案居住縣市分布為新北市413例、臺北市322例、基隆市29例、桃園市27例、彰化縣15例、新竹縣13例、臺中市5例、苗栗縣3例、宜蘭縣及花蓮縣各2例，新竹市、南投縣、雲林縣、臺南市、高雄市、屏東縣及臺東縣各1例；另13例為境外移入。\n\n指揮中心再次呼籲，民眾應落實手部衛生、咳嗽禮節及佩戴口罩等個人防護措施，減少不必要移動、活動或集會，避免出入人多擁擠的場所，或高感染傳播風險場域，並主動積極配合各項防疫措施，共同嚴守社區防線。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </ScrollView>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

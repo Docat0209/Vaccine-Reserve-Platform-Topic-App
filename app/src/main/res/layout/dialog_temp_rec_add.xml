@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="32dp"
+        android:background="@drawable/ic_radius_16dp"
+        android:padding="32dp">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:text="新增體溫紀錄"
+            android:textColor="@color/title_green"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:max="450"
+            android:maxHeight="8dp"
+            android:min="300"
+            android:progressDrawable="@drawable/ic_seekbar_track"
+            android:splitTrack="false"
+            android:thumb="@drawable/ic_circle_16dp"
+            android:thumbTint="@color/status_green"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.515"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <TextView
+            android:id="@+id/temp_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/ic_radius_4dp"
+            android:backgroundTint="@color/status_green"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp"
+            android:text="30.0°C"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/seekBar"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="30.0°C"
+            android:textColor="@color/text_green"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/seekBar" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="45.0°C"
+            android:textColor="@color/status_green"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/seekBar" />
+
+        <LinearLayout
+            android:id="@+id/date_picker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:background="@color/bg_green"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/seekBar"
+            tools:layout_editor_absoluteX="-12dp">
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="日期"
+                android:textColor="@color/title_green"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="Oct 12,20 21" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/status_green" />
+        </LinearLayout>
+
+        <TableLayout
+            android:id="@+id/time_picker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:stretchColumns="0,2"
+            app:layout_constraintTop_toBottomOf="@+id/date_picker"
+            tools:layout_editor_absoluteX="32dp">
+
+            <TableRow
+                android:id="@+id/time_picker_real"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:background="@drawable/ic_radius_4dp"
+                    android:backgroundTint="@color/bg_green">
+
+                    <TextView
+                        android:gravity="center"
+                        android:id="@+id/text_hour"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="12"
+                        android:textColor="@color/title_green"
+                        android:textSize="48sp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:text=":"
+                    android:textSize="48sp" />
+
+                <LinearLayout
+                    android:background="@drawable/ic_radius_4dp"
+                    android:backgroundTint="@color/bg_green">
+
+                    <TextView
+                        android:textColor="@color/status_green"
+                        android:gravity="center"
+                        android:id="@+id/text_minute"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="45"
+                        android:textSize="48sp" />
+
+                </LinearLayout>
+
+                <RadioGroup
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="16dp"
+                    android:background="@drawable/ic_stroke"
+                    android:backgroundTint="#E6F4ED"
+                    android:padding="2dp">
+
+                    <RadioButton
+                        android:id="@+id/am"
+                        android:layout_width="40dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/ic_radio_background"
+                        android:button="@color/white"
+                        android:gravity="center"
+                        android:text="AM"
+                        android:textColor="@drawable/ic_radio_text" />
+
+                    <RadioButton
+                        android:id="@+id/pm"
+                        android:layout_width="40dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/ic_radio_background"
+                        android:button="@color/white"
+                        android:gravity="center"
+                        android:text="PM"
+                        android:textColor="@drawable/ic_radio_text" />
+                </RadioGroup>
+            </TableRow>
+        </TableLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+
+            android:background="@drawable/ic_stroke"
+            android:backgroundTint="@color/bg_green"
+            android:textColor="@color/status_green"
+            android:id="@+id/button_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="30dp"
+            android:text="取消"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/button_add"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/time_picker" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:background="@drawable/ic_radius_4dp"
+            android:backgroundTint="@color/bg_green"
+            android:id="@+id/button_add"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="30dp"
+            android:text="新增"
+            android:textColor="@color/status_green"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/button_cancel"
+            app:layout_constraintTop_toBottomOf="@+id/time_picker" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

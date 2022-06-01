@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item"
+    android:layout_marginTop="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TableRow>
+        <LinearLayout
+            android:orientation="vertical">
+            <TextView
+                android:textColor="@color/title_green"
+                android:id="@+id/item_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2021-9"
+                android:fontFamily="@font/roboto_light"
+                android:textSize="14sp"/>
+            <TextView
+                android:textColor="@color/title_green"
+                android:id="@+id/item_day"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="11"
+                android:fontFamily="@font/roboto_medium"
+                android:textSize="18sp"/>
+        </LinearLayout>
+        <View
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray">
+
+        </View>
+        <TextView
+            android:text="測試用標題測試用標題測試用標題測試用標題測試用標題測試用標題測試用標題測試用標題測試用標題測試用標題測試用標題測試用標題測試用標題"
+            android:fontFamily="@font/roboto_light"
+            android:textColor="@color/text_green"
+            android:id="@+id/item_title"
+            android:textSize="16sp"
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:maxLines="2"
+            android:ellipsize="end" />
+    </TableRow>
+
+</TableLayout>

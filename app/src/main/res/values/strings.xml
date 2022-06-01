@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">VaccineReservePlatformTopicApp</string>
+    <string name="title_home">首頁</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="copyright">Copyright © 2022 疫苗預約系統\nCopyright © 2022 COVID-19 Vaccination Appointment System</string>
+    <string name="title_temp_rec">體溫紀錄</string>
+    <string name="title_reserve">疫苗預約</string>
+    <string name="title_news">疫情最新資訊</string>
+    <string name="title_video">防疫宣導影片</string>
+    <string name="title_result">疫苗預約結果</string>
+</resources>
